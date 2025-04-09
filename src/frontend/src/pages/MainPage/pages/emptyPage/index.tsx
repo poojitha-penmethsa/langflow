@@ -1,4 +1,4 @@
-import LangflowLogo from "@/assets/LangflowLogo.svg?react";
+import penguinLogo from "@/assets/penguinLogo.png";
 import ForwardedIconComponent from "@/components/common/genericIconComponent";
 import CardsWrapComponent from "@/components/core/cardsWrapComponent";
 import { Button } from "@/components/ui/button";
@@ -21,7 +21,11 @@ export const EmptyPage = ({ setOpenModal }: EmptyPageProps) => {
       <div className="m-0 h-full w-full bg-secondary p-0">
         <div className="text-container">
           <div className="relative z-20 flex w-full flex-col items-center justify-center gap-2">
-            <LangflowLogo className="h-7 w-8" />
+            {/* <LangflowLogo className="h-7 w-8" /> */}
+          <img src={penguinLogo} alt="Penguin Logo" className="h-5 w-6" 
+            style={{width: "150px", height: "40px"}}
+           /> 
+
             <h3
               className="pt-5 font-chivo text-2xl font-semibold text-foreground"
               data-testid="mainpage_title"

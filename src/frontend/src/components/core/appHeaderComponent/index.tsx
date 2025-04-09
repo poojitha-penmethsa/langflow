@@ -1,6 +1,7 @@
 import AlertDropdown from "@/alerts/alertDropDown";
-import DataStaxLogo from "@/assets/DataStaxLogo.svg?react";
-import LangflowLogo from "@/assets/LangflowLogo.svg?react";
+// import DataStaxLogo from "@/assets/DataStaxLogo.svg?react";
+// import LangflowLogo from "@/assets/LangflowLogo.svg?react";
+import penguinLogo from "@/assets/penguinLogo.png";
 import ForwardedIconComponent from "@/components/common/genericIconComponent";
 import ShadTooltip from "@/components/common/shadTooltipComponent";
 import { Button } from "@/components/ui/button";
@@ -61,12 +62,17 @@ export default function AppHeader(): JSX.Element {
           onClick={() => navigate("/")}
           className="mr-1 flex h-8 w-8 items-center"
           data-testid="icon-ChevronLeft"
+          style={{
+            width: "100%"
+          }}
         >
-          {ENABLE_DATASTAX_LANGFLOW ? (
+          {/* {ENABLE_DATASTAX_LANGFLOW ? (
             <DataStaxLogo className="fill-black dark:fill-[white]" />
           ) : (
             <LangflowLogo className="h-5 w-6" />
-          )}
+          )} */}
+          <img src={penguinLogo} alt="Penguin Logo" className="h-5 w-6" style={{height: "100%", width: "100%"}} /> 
+
         </Button>
         {ENABLE_DATASTAX_LANGFLOW && (
           <>
